@@ -1,0 +1,98 @@
+/* card styles */
+
+.card {
+  width: 270px;
+  margin: 20px;
+  background-image: linear-gradient(163deg, #00ff75 0%, #4f1fff 100%);
+  border-radius: 20px;
+  transition: all .3s;
+  display: flex;
+}
+
+.card2 {
+  width: 270px;
+  background-color: #fafafaa9;
+  border: solid 2px rgb(94, 255, 0);
+  border-radius: 20px;
+  transition: all .2s;
+  display: flex;
+  flex-flow: column;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+.image {
+  border-radius: 10px;
+  border: solid 1px #000000;
+}
+
+/* button styles */
+
+button {
+  position:relative;
+  background-color: rgb(202, 24, 62);
+  border-radius: 5px;
+  box-shadow: rgb(171, 18, 74) 0px 4px 0px 0px;
+  padding: 15px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  width: 29px;
+  height: 29px;
+  color: rgb(0, 0, 0);
+  border: none;
+  align-items: center;
+  font-size: 20px;
+  transition: all .3s ease-in-out;
+  z-index: 1;
+  overflow: hidden;
+  padding-top: 2px;
+  padding-left: 5px;
+  margin-bottom: 15px;
+  margin-left: 190px;
+}
+
+button::before {
+  content: "";
+  background-color: rgb(248, 50, 93);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width 700ms ease-in-out;
+  display: inline-block;
+}
+
+button:hover::before {
+  width: 100%;
+}
+
+/* info styles */
+
+.name {
+  color: #000000;
+  margin: 15px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 21px;
+  text-shadow: -2px 0px rgb(0, 229, 255), 2px 0px rgb(245, 0, 37) ;
+}
+
+.info {
+  color: rgb(0, 0, 0);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-self: center;
+  column-gap: 20px;
+  font-size: 15px;
+}
+
