@@ -17,3 +17,7 @@
 .submit {
 	margin-top: 60px;
 }
+
+.errors{
+	color: red;
+}
