@@ -35,7 +35,7 @@ function App() {
   };
 
   return (
-    <div className="App" style={{ padding: "25px" }}>
+    <div  className='App' id={Location.pathname === "/" && 'appBack'} style={{ padding: "25px" }}>
       <div>
         {Location.pathname === "/" ? null : <Nav onSearch={onSearch} />}
       </div>

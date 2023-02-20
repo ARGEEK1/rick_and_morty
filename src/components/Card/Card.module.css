@@ -90,6 +90,11 @@
   text-shadow: 2px -1px rgb(0, 229, 255), -2px 1px rgb(255, 0, 38) ;
 }
 
+.name:hover {
+  background-image: linear-gradient(163deg, #00ff774a 0%, #501fff48 100%);
+  box-shadow: 2px 2px 2px #00ff75;
+}
+
 .info {
   color: rgb(243, 243, 243);
   display: grid;

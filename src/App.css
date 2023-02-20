@@ -1,3 +1,7 @@
 .App {
   text-align: center;
 }
+
+#appBack {
+  backdrop-filter: blur(15px);
+}
