@@ -55,3 +55,11 @@
 #navBtnR:hover {
 	background-color: #26ff00;
 }
+
+#navBtnL {
+	background: #ef5e5e;
+}
+
+#navBtnL:hover {
+	background-color: #ff271b;
+}

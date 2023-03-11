@@ -18,6 +18,7 @@ function Nav(props) {
           </div>
           <Link to='/about'><button className={styles.navBtn}>About</button></Link>
           <Link to='/home'><button className={styles.navBtn}>Home</button></Link>
+          <button onClick={props.logout} className={styles.navBtn} id={styles.navBtnL}>Logout</button>
         </nav>
       </header>
     </div>

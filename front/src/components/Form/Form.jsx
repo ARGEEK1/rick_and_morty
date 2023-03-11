@@ -2,7 +2,7 @@ import styles from './Form.module.css';
 import { useState } from 'react';
 import { validation } from './validation';
 
-export default function Form() {
+export default function Form(props) {
   const [userData, setUserData] = useState({ username: '', password: ''});
   const [errors, setEroors] = useState({username:'', password:''});
 
@@ -20,11 +20,16 @@ export default function Form() {
       [e.target.name] : e.target.value
     });
 
-  }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.login(userData);
+  };
 
   return (
     <div className={styles.form}>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className={styles.user}>
           <label htmlFor='username'>Username: </label>
           <input name='username' type='text' value={userData.username} onChange={handleInputChange}></input>
