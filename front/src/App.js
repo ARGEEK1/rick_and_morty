@@ -4,10 +4,15 @@ import Cards from "./components/Cards/Cards.jsx";
 import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
 import Form from "./components/Form/Form";
+import Favorites from "./components/Favorites/Favorites"
+
+import { useDispatch } from "react-redux";
+import { deleteCharacter } from "./redux/actions";
 
 import { useState, useEffect } from "react";
-
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+
+
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -57,9 +62,12 @@ function App() {
         });
     }
   };
-
+  
+  const dispatch = useDispatch()
+  
   const onClose = (id) => {
     setCharacters(characters.filter((character) => character.id !== id));
+    dispatch(deleteCharacter(id));
   };
 
   return (
@@ -80,6 +88,7 @@ function App() {
           />
           <Route path="/about" element={<About />} />
           <Route path="/detail/:detailId" element={<Detail />} />
+          <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </div>
     </div>

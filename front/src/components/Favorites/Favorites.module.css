@@ -1,0 +1,53 @@
+.cards {
+  margin: 70px 30px 50px;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, 252px);
+  grid-template-rows: 1fr;
+  grid-gap: 1.5em;
+  justify-items: center;
+}
+
+.card {
+  width: 270px;
+  margin: 20px;
+  background-image: linear-gradient(163deg, #00ff75 0%, #4f1fff 100%);
+  border-radius: 20px;
+  transition: all .3s;
+  display: flex;
+}
+
+.card2 {
+  width: 270px;
+  background-image: url(/public/images/starry-night-sparkly-sky.gif);
+  border: solid 2px rgba(0, 255, 242, 0.265);
+  border-radius: 20px;
+  transition: all .2s;
+  display: flex;
+  flex-flow: column;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+.image {
+  border-radius: 10px;
+  border: solid 1px #000000;
+}
+
+.name {
+  color: #ff008cc9;
+  margin: 15px;
+  font-family: 'Share Tech Mono', monospace;
+  border-radius: 10px;
+  font-size: 21px;
+  text-shadow: 2px -1px rgb(0, 229, 255), -2px 1px rgb(255, 0, 38) ;
+}
